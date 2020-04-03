@@ -1,0 +1,9 @@
+mutation updateTask($id: ID!, $data: editTaskInput!) {
+  updateTask(input: { where: { id: $id }, data: $data }) {
+    task {
+      id
+      name
+      amount
+    }
+  }
+}

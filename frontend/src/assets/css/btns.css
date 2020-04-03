@@ -1,0 +1,30 @@
+.btn-brand {
+  @apply bg-brand font-bold font-brand text-brand uppercase py-3 px-6 text-white text-xs;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn-brand:active,
+.btn-brand:hover {
+  @apply bg-darkbrand;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+}
+.btn-brand:disabled {
+  @apply bg-darkgray;
+  box-shadow: none !important;
+  cursor: not-allowed;
+}
+.color-link {
+  color: currentColor;
+  transition: color 0.3s ease;
+}
+.color-link:hover {
+  @apply text-brand;
+}
+.color-link--brand {
+  @apply text-brand;
+  transition: color 0.3s ease;
+}
+.color-link--brand:hover {
+  @apply text-darkbrand;
+}

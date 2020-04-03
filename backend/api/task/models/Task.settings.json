@@ -1,0 +1,24 @@
+{
+  "connection": "default",
+  "collectionName": "tasks",
+  "info": {
+    "name": "task",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "amount": {
+      "type": "decimal"
+    },
+    "name": {
+      "type": "text"
+    }
+  }
+}

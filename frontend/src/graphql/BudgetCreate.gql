@@ -1,0 +1,26 @@
+mutation createBudget($data: BudgetInput!) {
+  createBudget(input: { data: $data }) {
+    budget {
+      id
+      name
+      status
+      date
+      erased
+      descrip
+      deliverables
+      compatibility
+      requirements
+      timing
+      noinclusive
+      client {
+        id
+        name
+      }
+      tasks {
+        id
+        name
+        amount
+      }
+    }
+  }
+}

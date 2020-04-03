@@ -1,0 +1,32 @@
+module.exports = {
+  resolver: {
+    Query: {
+      budgets: {
+        description: "Get budgets",
+        policies: [
+          "plugins.users-permissions.isAuthenticated",
+          "global.isOwner"
+        ],
+        resolver: "Budgets.find"
+      }
+    },
+    Mutation: {
+      createBudget: {
+        description: "Create budget",
+        policies: [
+          "plugins.users-permissions.isAuthenticated",
+          "global.setOwner"
+        ],
+        resolver: "Budgets.create"
+      },
+      updateBudget: {
+        description: "Update budget",
+        policies: [
+          "plugins.users-permissions.isAuthenticated",
+          "global.isOwner"
+        ],
+        resolver: "Budgets.update"
+      },
+    }
+  }
+};

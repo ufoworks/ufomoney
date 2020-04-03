@@ -1,0 +1,25 @@
+mutation updateBudget($id: ID!, $data: editBudgetInput!) {
+  updateBudget(input: { where: { id: $id }, data: $data }) {
+    budget {
+      id
+      name
+      status
+      date
+      erased
+      deliverables
+      compatibility
+      requirements
+      timing
+      noinclusive
+      client {
+        id
+        name
+      }
+      tasks {
+        id
+        name
+        amount
+      }
+    }
+  }
+}

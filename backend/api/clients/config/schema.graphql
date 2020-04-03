@@ -1,0 +1,14 @@
+module.exports = {
+  resolver: {
+    Query: {
+      clients: {
+        description: "Get clients",
+        policies: [
+          "plugins.users-permissions.isAuthenticated",
+          "global.isOwner"
+        ],
+        resolver: "Clients.find"
+      }
+    }
+  }
+};

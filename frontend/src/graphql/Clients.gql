@@ -1,0 +1,6 @@
+query clients {
+  clients {
+    id
+    name
+  }
+}

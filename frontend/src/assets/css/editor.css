@@ -1,0 +1,6 @@
+.vue-simplemde .editor-toolbar {
+  @apply border-gray bg-lightbrand;
+}
+.vue-simplemde .CodeMirror {
+  @apply border-gray;
+}

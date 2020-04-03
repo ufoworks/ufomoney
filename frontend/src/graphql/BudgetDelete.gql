@@ -1,0 +1,7 @@
+mutation deleteBudget($id: ID!) {
+  deleteBudget(input: { where: { id: $id }}) {
+    budget {
+      id
+    }
+  }
+}

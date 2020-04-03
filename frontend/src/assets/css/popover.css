@@ -1,0 +1,7 @@
+.popover-menu {
+  @apply bg-lightbrand py-3 pr-4 pl-8 text-sm rounded !important;
+  box-shadow: none !important;
+  min-width: 120px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important;
+  z-index: 100;
+}

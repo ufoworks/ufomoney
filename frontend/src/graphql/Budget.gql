@@ -1,0 +1,29 @@
+query budget($id: ID!) {
+  budget(id: $id) {
+    id
+    name
+    date
+    status
+    erased
+    descrip
+    deliverables
+    compatibility
+    requirements
+    timing
+    noinclusive
+    client {
+      id
+      name
+      cif
+      adress
+      city
+      country
+      cp
+    }
+    tasks {
+      id
+      name
+      amount
+    }
+  }
+}

@@ -1,0 +1,17 @@
+query budgets($where: JSON, $sort: String) {
+  budgets(sort: $sort, where: $where) {
+    id,
+    name,
+    date,
+    status,
+    erased,
+    client {
+      id
+      name
+    },
+    tasks {
+      id,
+      amount
+    }
+  }
+}

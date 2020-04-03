@@ -1,0 +1,9 @@
+mutation deleteTask($id: ID!) {
+  deleteTask(input: { where: { id: $id } }) {
+    task {
+      id
+      name
+      amount
+    }
+  }
+}

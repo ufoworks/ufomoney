@@ -1,0 +1,59 @@
+{
+  "connection": "default",
+  "collectionName": "budgets",
+  "info": {
+    "name": "budgets"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "compatibility": {
+      "type": "richtext"
+    },
+    "descrip": {
+      "type": "richtext"
+    },
+    "noinclusive": {
+      "type": "richtext"
+    },
+    "requirements": {
+      "type": "richtext"
+    },
+    "timing": {
+      "type": "richtext"
+    },
+    "tasks": {
+      "collection": "task"
+    },
+    "client": {
+      "model": "clients"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "initial",
+        "accepted",
+        "rejected"
+      ]
+    },
+    "erased": {
+      "type": "boolean",
+      "default": false
+    },
+    "owner": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "deliverables": {
+      "type": "richtext"
+    }
+  }
+}

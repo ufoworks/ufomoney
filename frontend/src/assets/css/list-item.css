@@ -1,0 +1,74 @@
+.list-item {
+  position: relative;
+  z-index: 0;
+  @apply rounded shadow bg-white pt-4 pb-3 px-6;
+  display: grid;
+  grid-column-gap: 1rem;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "date tools"
+    "client status"
+    "name currency";
+  cursor: pointer;
+}
+.list-item__tools {
+  position: relative;
+  z-index: 2;
+  grid-area: tools;
+  justify-self: end;
+  align-self: start;
+  overflow: hidden;
+}
+.list-item__toolsmenu {
+  display: flex;
+  transform: translateX(100%);
+  will-change: transform;
+  transition: transform 0.3s theme('easings.inOutQuart');
+}
+.list-item__toolsmenu.open {
+  transform: translateX(0);
+}
+.list-item__coverbtn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.list-item__tools > li + li {
+  margin-left: 0.5rem;
+}
+.list-item__client {
+  grid-area: client;
+}
+.list-item__name {
+  grid-area: name;
+  @apply text-2xl font-brand font-bold;
+}
+.list-item__date {
+  grid-area: date;
+  @apply text-lightgray text-sm;
+}
+.list-item__currency {
+  grid-area: currency;
+  align-self: end;
+  justify-self: end;
+  @apply text-lg text-brand font-bold;
+}
+.list-item__status {
+  grid-area: status;
+  align-self: end;
+  justify-self: end;
+  font-size: 11px;
+  color: white;
+  padding: 0 5px;
+  @apply rounded;
+}
+.list-item__status.accepted {
+  @apply bg-green;
+}
+.list-item__status.rejected {
+  @apply bg-red;
+}

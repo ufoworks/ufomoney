@@ -1,0 +1,29 @@
+.dp:before {
+  background: theme('colors.brand') !important;
+}
+.dr-cals .dr-in-range {
+  @apply bg-lightbrand;
+  color: black;
+}
+.dr-cals .dr-selected,
+.dr-cals .dr-selected:focus,
+.dr-cals .dp-current,
+.dp-cal .dp-current,
+.dp-cal .dp-selected {
+  @apply bg-brand;
+}
+.dr-cals .dp-day-today:after,
+.dp-cal .dp-day-today:after {
+  @apply border-darkbrand;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.dp-cal .dp-day:hover {
+  @apply bg-lightbrand text-black;
+}
+.vrdp-shortcuts a {
+  @apply text-brand;
+}
+.vrdp-shortcuts a:hover {
+  @apply text-darkbrand;
+}
